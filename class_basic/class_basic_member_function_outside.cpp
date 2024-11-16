@@ -4,6 +4,7 @@
 
 class student
 {
+    /*by default all data members are having provate accsess*/
     int id;
     int roll_no;
     char name[10];
