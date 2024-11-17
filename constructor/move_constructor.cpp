@@ -29,6 +29,10 @@ public:
         id = s.id;
         roll_no = s.roll_no;
         std::strcpy(name, s.name); // Use strcpy to move the string
+        // Reset source object
+        s.id = 0;
+        s.roll_no = 0;
+        std::strcpy(s.name, "");
     }
 
     void get_data() 
