@@ -36,51 +36,51 @@ int main()
 
  Initial State (s1)   
 +-------------------+
-| id: 10            |
-| roll_no_prt: ---->| 4                     |
+| id: 10            |    
+| roll_no_prt: ---->| 4  mem loc :1000                 |
 +-------------------+
 After Modifying s1
 +-------------------+
 | id: 20            |
-| roll_no_prt: ---->| 200                   |
+| roll_no_prt: ---->| 200  mem loc :1000                    |
 +-------------------+
 After Shallow Copy (s2(s1))
 
 s1
 +-------------------+
 | id: 20            |
-| roll_no_prt: ---->| 200                   |
+| roll_no_prt: ---->| 200  mem loc :1000                    |
 +-------------------+
 
 s2
 +-------------------+
 | id: 20            |
-| roll_no_prt: ---->| 200                   |
+| roll_no_prt: ---->| 200   mem loc :1000                   |
 +-------------------+
 After Modifying s2
 
 +-------------------+
 | id: 20            |
-| roll_no_prt: ---->| 300                   |
+| roll_no_prt: ---->| 300    mem loc :1000                  |
 +-------------------+
 
 s2
 +-------------------+
 | id: 30            |
-| roll_no_prt: ---->| 300                   |
+| roll_no_prt: ---->| 300     mem loc :1000                 |
 +-------------------+
 
 After Deleting s1.roll_no_prt
 
 +-------------------+
 | id: 20            |
-| roll_no_prt: ---->| (deleted memory)      |
+| roll_no_prt: ---->| (deleted memory)  mem loc :1000       |
 +-------------------+
 
 s2
 +-------------------+
 | id: 30            |
-| roll_no_prt: ---->| (dangling pointer)    |
+| roll_no_prt: ---->| (dangling pointer)  mem loc :1000     |
 +-------------------+
 issue due to shallow copy, pointer will  same memory even oject is differant*/
 
