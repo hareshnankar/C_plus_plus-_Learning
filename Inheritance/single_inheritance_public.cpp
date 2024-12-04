@@ -6,8 +6,10 @@ class {derived_class_name} : {visibility_mode} {base_class_name}
 
 Note:
 1.default visibity mode is private
-2.public visibility : public of base will become public of derived
-3.private visibility : public of base will become private of derived
+2.private will not be inherited in derived class
+3.public visibility : public of base will become public of derived
+4.private visibility : public of base will become private of derived
+5.protected visibility : public of base will become protected of derived
 */
 #include <iostream>
 #include <cstring> // For strcpy
