@@ -77,7 +77,7 @@ class derive1 : public base
         derive1_value4_public = d+4;
     }
 
-    void base_get_all_var()
+    void derive1_get_all_var()
     {
         cout<<"base_value1_private : "<<derive1_value1_private<<endl;
         cout<<"base_value2_public : "<<base_value2_protected<<endl;
@@ -104,7 +104,7 @@ class derive2 : public derive1
         int derive2_value4_public;
 
 
-    void derive1_set_all_var(int a,int b, int c,int d)
+    void derive2_set_all_var(int a,int b, int c,int d)
     {
         base_value2_protected = b;
         base_value3_public = c;
@@ -120,7 +120,7 @@ class derive2 : public derive1
         derive2_value4_public = d+3;
     }
 
-    void base_get_all_var()
+    void derive2_get_all_var()
     {
         cout<<"base_value2_protected : "<<base_value2_protected<<endl;
         cout<<"base_value2_public : "<<base_value3_public<<endl;
@@ -141,7 +141,7 @@ class derive2 : public derive1
 int main()
 {
     derive2 s1; // Create an object of student
-    s1.derive1_set_all_var(10,20,30,40);
-    s1.base_get_all_var();
+    s1.derive2_set_all_var(10,20,30,40);
+    s1.derive2_get_all_var();
     return 0;
 }
