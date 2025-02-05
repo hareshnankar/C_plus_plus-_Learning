@@ -3,7 +3,9 @@
         "array": "cpp",
         "string": "cpp",
         "iostream": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "random": "c",
+        "typeinfo": "c"
     }
 	
 }
